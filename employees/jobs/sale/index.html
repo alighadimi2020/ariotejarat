@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#1E3A3A">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>درخواست استخدام | کارشناس فروش </title>
+
+</head>
+
+<body>
+
+    <main class="form-page">
+
+        <a href="../" class="back">
+            → بازگشت به موقعیت‌ها
+        </a>
+
+
+        <header class="form-header">
+
+
+            <h1>
+                درخواست استخدام
+            </h1>
+
+            <p>
+                موقعیت شغلی: <strong>کارشناس فروش</strong>
+            </p>
+
+        </header>
+
+
+        <form id="slaeForm" enctype="multipart/form-data">
+
+
+            <section class="form-section">
+
+                <div class="section-title">
+                    <span>01</span>
+
+                    <div>
+                        <h2>اطلاعات شخصی</h2>
+                        <p>اطلاعات اولیه خود را وارد کنید</p>
+                    </div>
+                </div>
+
+
+                <div class="fields">
+
+                    <label>
+                        نام
+                        <input
+                            type="text"
+                            name="first_name"
+                            placeholder="نام"
+                            required>
+                    </label>
+
+                    <label>
+                        نام خانوادگی
+                        <input
+                            type="text"
+                            name="last_name"
+                            placeholder="نام خانوادگی"
+                            required>
+                    </label>
+
+                    <label>
+                        شماره موبایل
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="09xxxxxxxxx"
+                            required>
+                    </label>
+
+                    <label>
+                        کد ملی
+                        <input
+                            type="text"
+                            name="national_id"
+                            inputmode="numeric"
+                            placeholder="کد ملی"
+                            required>
+                    </label>
+
+                    <label>
+                        سن
+                        <input
+                            type="number"
+                            name="age"
+                            min="15"
+                            max="80"
+                            placeholder="سن"
+                            required>
+                    </label>
+
+                    <label>
+                        شهر محل سکونت
+                        <input
+                            type="text"
+                            name="city"
+                            placeholder="شهر"
+                            required>
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <section class="form-section">
+
+                <div class="section-title">
+
+                    <span>02</span>
+
+                    <div>
+                        <h2>سوابق کاری</h2>
+                        <p>تجربه کاری خود را توضیح دهید</p>
+                    </div>
+
+                </div>
+
+
+                <div class="fields">
+
+                    <label>
+                        سابقه کار مرتبط
+                        <select name="experience" required>
+
+                            <option value="">
+                                انتخاب کنید
+                            </option>
+
+                            <option>
+                                بدون سابقه
+                            </option>
+
+                            <option>
+                                کمتر از ۱ سال
+                            </option>
+
+                            <option>
+                                ۱ تا ۳ سال
+                            </option>
+
+                            <option>
+                                ۳ تا ۵ سال
+                            </option>
+
+                            <option>
+                                بیشتر از ۵ سال
+                            </option>
+
+                        </select>
+                    </label>
+
+
+                    <label>
+                        آخرین محل کار
+                        <input
+                            type="text"
+                            name="last_workplace"
+                            placeholder="نام شرکت یا مجموعه">
+                    </label>
+
+
+                    <label class="full">
+
+                        درباره سابقه کاری خود توضیح دهید
+
+                        <textarea
+                            name="work_history"
+                            rows="5"
+                            placeholder="سوابق، مسئولیت‌ها و تجربه‌های کاری خود را بنویسید..."
+                            required></textarea>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <section class="form-section">
+
+                <div class="section-title">
+
+                    <span>03</span>
+
+                    <div>
+                        <h2>سؤالات شغلی</h2>
+                        <p>پاسخ‌ها به بررسی درخواست شما کمک می‌کنند</p>
+                    </div>
+
+                </div>
+
+
+                <div class="questions">
+
+                    <label>
+
+                        آیا تجربه کار به عنوان کارشناس فروش یا فروشنده دارید؟
+                        <textarea
+                            name="warehouse_experience"
+                            rows="4"
+                            placeholder="توضیح دهید..."
+                            required></textarea>
+
+                    </label>
+
+
+                    <label>
+
+                        آیا با ثبت اطلاعات کالا با کامپیوتر یا نرم‌افزارهای انبار کار کرده‌اید؟
+
+                        <textarea
+                            name="software_experience"
+                            rows="4"
+                            placeholder="توضیح دهید..."
+                            required></textarea>
+
+                    </label>
+
+
+                    <label>
+
+                        عکس العمل شما دربرابر رفتار نا شایست مشتری چیست؟
+                        <textarea
+                            name="mismatch_response"
+                            rows="4"
+                            placeholder="پاسخ خود را بنویسید..."
+                            required></textarea>
+
+                    </label>
+
+
+                    <label>
+
+                        چه چیزی باعث می‌شود یک محیط کاری را برای ادامه همکاری مناسب بدانید؟
+
+                        <textarea
+                            name="work_environment"
+                            rows="4"
+                            placeholder="پاسخ خود را بنویسید..."
+                            required></textarea>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <section class="form-section">
+
+                <div class="section-title">
+
+                    <span>04</span>
+
+                    <div>
+                        <h2>مدارک</h2>
+                        <p>مدارک موردنیاز را بارگذاری کنید</p>
+                    </div>
+
+                </div>
+
+
+                <div class="uploads">
+
+                    <label class="upload-box">
+
+                        <input
+                            type="file"
+                            name="resume"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+                        <span class="upload-icon">
+                            +
+                        </span>
+
+                        <span>
+                            رزومه
+                        </span>
+
+                        <small>
+                            PDF / JPG / PNG
+                        </small>
+
+                    </label>
+
+
+                    <label class="upload-box">
+
+                        <input
+                            type="file"
+                            name="national_card"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+                        <span class="upload-icon">
+                            +
+                        </span>
+
+                        <span>
+                            کارت ملی
+                        </span>
+
+                        <small>
+                            PDF / JPG / PNG
+                        </small>
+
+                    </label>
+
+
+                    <label class="upload-box">
+
+                        <input
+                            type="file"
+                            name="identity_document"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+                        <span class="upload-icon">
+                            +
+                        </span>
+
+                        <span>
+                            مدرک شناسایی
+                        </span>
+
+                        <small>
+                            PDF / JPG / PNG
+                        </small>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <section class="submit-section">
+
+                <div class="submit-note">
+
+                    <span>✓</span>
+
+                    <p>
+                        لطفاً قبل از ارسال، اطلاعات واردشده را بررسی کنید.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-button">
+
+                    ارسال درخواست استخدام
+
+                    <span>←</span>
+
+                </button>
+
+            </section>
+
+
+        </form>
+
+
+        <div id="formMessage" class="form-message"></div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
