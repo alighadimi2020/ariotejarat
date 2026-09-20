@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green: #1E3A3A;
+    --green-dark: #102629;
+    --black: #080F14;
+    --gold: #D4AF7C;
+    --white: #F8F8F8;
+    --muted: rgba(248, 248, 248, 0.58);
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 175, 124, 0.11),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #080F14,
+            #102629 50%,
+            #1E3A3A
+        );
+
+    color: var(--white);
+
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.jobs-page {
+    width: min(760px, calc(100% - 32px));
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 30px 0 35px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    transition: color .3s ease;
+}
+
+.back-button:hover {
+    color: var(--gold);
+}
+
+.back-button span {
+    font-size: 11px;
+}
+
+.jobs-header {
+    margin: 65px 0 40px;
+
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    direction: ltr;
+}
+
+.jobs-header h1 {
+    margin-top: 12px;
+
+    font-size: clamp(30px, 6vw, 45px);
+
+    font-weight: 600;
+}
+
+.jobs-header p {
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.job-card {
+    min-height: 108px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 24px;
+
+    border: 1px solid rgba(212, 175, 124, 0.35);
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(30, 58, 58, .95),
+            rgba(16, 38, 41, .95)
+        );
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.job-card:not(.disabled):hover {
+    transform: translateY(-4px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.22);
+}
+
+
+
+.job-icon {
+    width: 57px;
+    height: 57px;
+
+    flex: 0 0 57px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--gold);
+
+    border: 1px solid rgba(212,175,124,.42);
+
+    border-radius: 50%;
+}
+
+.job-icon svg {
+    width: 27px;
+    height: 27px;
+
+    stroke: currentColor;
+
+    stroke-width: 1.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.job-content {
+    flex: 1;
+
+    margin-right: 19px;
+}
+
+.job-content h2 {
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.job-content p {
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.job-arrow {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(212,175,124,.42);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 18px;
+}
+
+.job-status {
+    padding: 5px 10px;
+
+    color: rgba(212,175,124,.65);
+
+    border: 1px solid rgba(212,175,124,.2);
+
+    border-radius: 20px;
+
+    font-size: 8px;
+}
+
+.job-card.disabled {
+    opacity: .58;
+
+    cursor: default;
+}
+
+footer {
+    margin-top: 55px;
+
+    text-align: center;
+
+    color: rgba(212,175,124,.4);
+
+    font-family: Georgia, serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    direction: ltr;
+}
+
+@media (max-width: 600px) {
+
+    .jobs-page {
+        width: calc(100% - 26px);
+
+        padding-top: 22px;
+    }
+
+    .jobs-header {
+        margin: 55px 0 30px;
+    }
+
+    .job-card {
+        min-height: 96px;
+
+        padding: 17px 15px;
+
+        border-radius: 15px;
+    }
+
+    .job-number {
+        width: 26px;
+
+        font-size: 10px;
+    }
+
+    .job-icon {
+        width: 48px;
+        height: 48px;
+
+        flex-basis: 48px;
+    }
+
+    .job-icon svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .job-content {
+        margin-right: 12px;
+    }
+
+    .job-content h2 {
+        font-size: 15px;
+    }
+
+    .job-content p {
+        font-size: 8.5px;
+        line-height: 1.8;
+    }
+
+    .job-arrow {
+        width: 32px;
+        height: 32px;
+
+        font-size: 15px;
+    }
+}
